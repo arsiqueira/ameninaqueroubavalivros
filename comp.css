@@ -1,0 +1,116 @@
+/* Estilo da seção de comparação */
+.comparison {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding-bottom: 100px;
+}
+
+/* Colunas estilizadas */
+.column {
+    width: 48%;
+    background: linear-gradient(135deg, #f7f8fa, #ffffff);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border: 2px solid #ddd;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Detalhes decorativos no fundo das colunas */
+.column::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at top right, #b22222, transparent), radial-gradient(circle at bottom left, #4a4e69, transparent);
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.column h2 {
+    font-family: 'Georgia', serif;
+    color: #b22222;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.column ul {
+    list-style-type: none;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.column ul li {
+    font-size: 1.15em;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    background: #fafafa;
+    border-left: 4px solid #b22222;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+}
+
+/* Animação ao passar o mouse sobre os itens */
+.column ul li:hover {
+    transform: scale(1.02);
+    background-color: #f1f1f1;
+}
+
+/* Sombra sutil ao passar o mouse sobre a coluna */
+.column:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.column.book {
+    border-color: #b22222;
+}
+
+.column.movie {
+    border-color: #b22222;
+}
+
+.column.book::before {
+    background-image: radial-gradient(circle at top right, #b22222, transparent), radial-gradient(circle at bottom left, #f7caca, transparent);
+}
+
+.column.movie::before {
+    background-image: radial-gradient(circle at top right, #b22222, transparent), radial-gradient(circle at bottom left, #c5c6d0, transparent);
+}
+
+
+.example-content {
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #e7f9ff; /* Um tom mais suave de azul */
+    border: 1px solid #a2dff7; /* Borda com um tom mais leve */
+    border-radius: 8px; /* Cantos arredondados */
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Suave transição */
+    max-height: 0; /* Inicialmente oculto */
+    opacity: 0; /* Inicialmente invisível */
+    overflow: hidden; /* Oculta o conteúdo além da altura máxima */
+}
+
+.example-content.show {
+    max-height: 200px; /* Altura máxima ao mostrar */
+    opacity: 1; /* Torna visível */
+    background: #fafafa;
+    border-color: #b22222;
+    margin-bottom: 10px;
+}
+
+li:hover {
+    text-decoration: underline; /* Sublinha ao passar o mouse */
+    color: #b22222; /* Muda a cor ao passar o mouse */
+}
