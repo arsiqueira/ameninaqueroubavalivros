@@ -368,6 +368,44 @@ button:hover {
     cursor: pointer; /* Muda o cursor ao passar sobre o botão */
 }
 
+/* Media Queries */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em; /* Reduz o tamanho do título principal em telas pequenas */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Reduz o tamanho dos subtítulos em telas pequenas */
+    }
+
+    p {
+        font-size: 1em; /* Reduz o tamanho do texto em telas pequenas */
+    }
+
+    nav ul {
+        flex-direction: column; /* Muda a direção da lista de navegação para coluna */
+        align-items: center; /* Centraliza os itens da lista */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Ajusta a margem entre os itens */
+    }
+
+    .book-section, .movie-section {
+        flex-direction: column; /* Alinha imagem e texto verticalmente em telas menores */
+        width: 90%; /* Reduz a largura da seção */
+    }
+
+    .comments-section {
+        width: 90%; /* Ajusta a largura da seção de comentários */
+    }
+    
+    footer {
+        flex-direction: column; /* Alinha itens do rodapé em coluna */
+        align-items: center; /* Centraliza os itens no rodapé */
+    }
+}
+
 .vertical-spacing {
     margin: 50px 0; /* Espaçamento vertical entre livro e filme */
 }
