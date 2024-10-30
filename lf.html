@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livro x Filme - A Menina que Roubava Livros</title>
+    
+    <link rel="icon" href="book-cover.png" sizes="12x12" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="comp.css">
+</head>
+
+<body>
+
+    <div class="falling-snow"></div> <!-- Mantenha apenas esta div -->
+    <header>
+        <h1>A Menina que Roubava Livros</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li class="active"><a href="lf.html">Livro x Filme</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="play.html">Músicas</a></li>
+                <li><a href="mais.html">E mais</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="comparison">
+            <div class="column book">
+                <h2>Livro</h2>
+                <ul>
+                    <li onclick="toggleExample('example1')" style="cursor: pointer;">
+                        <strong>Aprofundamento da Relação:</strong> A relação entre Liesel e Max é mais explorada.
+                    </li>
+                    <div id="example1" class="example-content">
+                        <p>No livro, Liesel e Max desenvolvem uma amizade profunda através de cartas e conversas sobre
+                            suas experiências e medos, o que não é tão explorado no filme.</p>
+                    </div>
+
+                    <li onclick="toggleExample('example2')" style="cursor: pointer;">
+                        <strong>Emoções de Liesel:</strong> Os pensamentos e emoções de Liesel são descritos
+                        detalhadamente.
+                    </li>
+                    <div id="example2" class="example-content">
+                        <p>A narrativa do livro mergulha nos sentimentos de Liesel sobre a perda e a guerra, permitindo
+                            uma conexão emocional mais profunda com o leitor.</p>
+                    </div>
+
+                    <li onclick="toggleExample('example3')" style="cursor: pointer;">
+                        <strong>Contexto Histórico:</strong> Há um foco maior no contexto histórico da Segunda Guerra
+                        Mundial.
+                    </li>
+                    <div id="example3" class="example-content">
+                        <p>O livro oferece uma análise detalhada do impacto da guerra na vida das pessoas, destacando a
+                            resistência da população.</p>
+                    </div>
+
+                    <li onclick="toggleExample('example4')" style="cursor: pointer;">
+                        <strong>Narrativa da Morte:</strong> A morte narra os eventos, proporcionando um tom sombrio.
+                    </li>
+                    <div id="example4" class="example-content">
+                        <p>A perspectiva da Morte como narradora oferece uma visão única e profunda, refletindo sobre a
+                            fragilidade da vida.</p>
+                    </div>
+
+                    <li onclick="toggleExample('example5')" style="cursor: pointer;">
+                        <strong>Roubo de Livros:</strong> O roubo de livros é apresentado como ato de resistência e
+                        sobrevivência.
+                    </li>
+                    <div id="example5" class="example-content">
+                        <p>Liesel utiliza os livros como uma forma de escapar da realidade e encontrar esperança em
+                            tempos sombrios.</p>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="column movie">
+                <h2>Filme</h2>
+                <ul>
+                    <li onclick="toggleExample('example6')" style="cursor: pointer;">
+                        <strong>Aprofundamento da Relação:</strong> A relação entre Liesel e Max é menos aprofundada.
+                    </li>
+                    <div id="example6" class="example-content">
+                        <p>No filme, a conexão entre Liesel e Max é mais superficial, sem o desenvolvimento detalhado
+                            visto no livro.</p>
+                    </div>
+
+                    <li onclick="toggleExample('example7')" style="cursor: pointer;">
+                        <strong>Emoções de Liesel:</strong> As emoções de Liesel são mostradas visualmente, sem narração
+                        interna.
+                    </li>
+                    <div id="example7" class="example-content">
+                        <p>As emoções são transmitidas através de atuações, mas falta a profundidade da narração interna
+                            do livro.</p>
+                    </div>
+
+                    <li onclick="toggleExample('example8')" style="cursor: pointer;">
+                        <strong>Contexto Histórico:</strong> O contexto da guerra é abordado de forma mais superficial.
+                    </li>
+                    <div id="example8" class="example-content">
+                        <p>Embora a guerra seja um tema central, o filme não mergulha nas complexidades históricas como
+                            o livro faz.</p>
+                    </div>
+
+                    <li onclick="toggleExample('example9')" style="cursor: pointer;">
+                        <strong>Narrativa da Morte:</strong> A morte aparece em momentos breves, sem narrar a história.
+                    </li>
+                    <div id="example9" class="example-content">
+                        <p>No filme, a Morte tem um papel menor, limitando a visão única que ela oferece no livro.</p>
+                    </div>
+
+                    <li onclick="toggleExample('example10')" style="cursor: pointer;">
+                        <strong>Roubo de Livros:</strong> O foco no roubo de livros é reduzido em comparação ao livro.
+                    </li>
+                    <div id="example10" class="example-content">
+                        <p>O filme menciona o roubo de livros, mas não explora seu significado profundo como o livro
+                            faz.</p>
+                    </div>
+                </ul>
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+
+
+    <footer>
+        <img src="tree-dry.png" alt="Imagem de árvore" class="tree-image-footer">
+        <p>&copy; 2024 - Inspirado em “A Menina que Roubava Livros”</p>
+        <img src="book-cover.png" alt="Imagem de livro" class="book-image-footer">
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

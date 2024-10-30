@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E mais - A Menina que Roubava Livros</title>
+    
+    <link rel="icon" href="book-cover.png" sizes="12x12" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="falling-snow"></div> <!-- Mantenha apenas esta div -->
+    <header>
+        <h1>A Menina que Roubava Livros</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="lf.html">Livro x Filme</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="play.html">Músicas</a></li>
+                <li class="active"><a href="mais.html">E mais</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <!-- HTML permanece o mesmo -->
+<section class="book-section">
+    <img src="img/livro-capa.png" alt="Capa do Livro" class="media-image">
+    <div class="description">
+        <h2 class="section-title">A Menina que Roubava Livros</h2>
+        <p>Uma história emocionante sobre a amizade e o poder das palavras, ambientada durante a Segunda Guerra Mundial, onde uma jovem encontra conforto na leitura e na partilha de livros com aqueles que ama.</p>
+        <a href="livro/a-menina-que-roubava-livros.pdf" target="_blank" class="button-link">
+            <button class="action-button">Baixar PDF</button>
+        </a>
+    </div>
+</section>
+
+
+<!-- Seção do Filme -->
+<section class="movie-section">
+    
+    <div class="description">
+        <h2 class="section-title">A Menina que Roubava Livros - O Filme</h2>
+        <p>Uma adaptação emocionante da obra-prima de Markus Zusak, que traz à vida a história de Liesel Meminger e sua jornada durante a guerra.</p>
+        <a href="https://www.disneyplus.com/pt-br/movies/a-menina-que-roubava-livros/7dJKkukpeNRw" target="_blank" class="button-link">
+            <button class="action-button">Assistir</button>
+        </a>
+    </div>
+    <img src="img/filme-capa.jpg" alt="Capa do Filme" class="media-image">
+</section>
+
+
+    <section class="inspirational-quotes">
+        <h2>Mensagens Inspiradoras</h2>
+        <div class="quote-slider">
+            <div class="quote">
+                <p>"As palavras têm o poder de transformar vidas."</p>
+            </div>
+            <div class="quote">
+                <p>"A leitura é um refúgio em tempos de dificuldade."</p>
+            </div>
+            <div class="quote">
+                <p>"A empatia pode vencer o ódio."</p>
+            </div>
+            <div class="quote">
+                <p>"Nunca devemos esquecer as lições do passado."</p>
+            </div>
+        </div>
+        <button id="prev">Anterior</button>
+        <button id="next">Próximo</button>
+    </section>
+
+    <!-- Seção de Comentários -->
+    <div class="comments-section">
+        <h2>Deixe seu comentário</h2>
+        <form id="commentForm" onsubmit="submitComment(event)">
+            <input type="text" id="name" placeholder="Seu nome" required>
+            <div class="star-rating">
+                <span class="star" onclick="selectStar(1)">★</span>
+                <span class="star" onclick="selectStar(2)">★</span>
+                <span class="star" onclick="selectStar(3)">★</span>
+                <span class="star" onclick="selectStar(4)">★</span>
+                <span class="star" onclick="selectStar(5)">★</span>
+            </div>
+            <textarea id="comment" placeholder="Seu comentário..." required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="commentsList"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 - Inspirado em “A Menina que Roubava Livros”</p>
+        <img src="tree-dry.png" alt="Imagem de árvore" class="tree-image-footer">
+        <img src="book-cover.png" alt="Imagem de livro" class="book-image-footer">
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="app.js"></script> <!-- JavaScript para o slider -->
+</body>
+
+</html>
