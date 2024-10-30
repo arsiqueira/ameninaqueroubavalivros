@@ -43,3 +43,28 @@
 #next:hover{
     opacity: 1;
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .slider {
+        height: 250px; /* Ajusta a altura do slider em telas menores */
+    }
+
+    .item {
+        width: 90%; /* Ajusta a largura dos itens em telas menores */
+        height: auto; /* Ajusta a altura para auto em telas menores */
+        font-size: 16px; /* Reduz o tamanho da fonte em telas menores */
+        left: 5%; /* Centraliza o item */
+        top: 10%; /* Ajusta a posição vertical */
+    }
+
+    #next {
+        right: 20px; /* Ajusta a posição do botão "next" */
+        top: 30%; /* Ajusta a posição vertical */
+    }
+
+    #prev {
+        left: 20px; /* Ajusta a posição do botão "prev" */
+        top: 30%; /* Ajusta a posição vertical */
+    }
+}
