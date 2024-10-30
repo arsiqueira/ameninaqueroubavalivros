@@ -1,0 +1,375 @@
+@font-face {
+    font-family: 'Candlescript';
+    src: url('Candlescript.otf') format('opentype');
+}
+
+html, body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    min-height: 100vh; /* Garante que o body ocupe pelo menos 100% da altura da viewport */
+    overflow-x: hidden; /* Impede o overflow horizontal */
+}
+
+nav ul li.active a {
+    color: #b22222; /* Altere para a cor que você quiser */
+    font-weight: bold; /* Torna o texto em negrito, opcional */
+}
+
+
+
+header {
+    height: 150px;
+    background: linear-gradient(to bottom, #ffffff, #f0f4f8);
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Candlescript', serif;
+    font-size: 4.5em;
+    color: #b22222;
+    margin: 0;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px #888;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #b22222;
+}
+
+.intro {
+    padding: 50px;
+    text-align: center;
+    background-color: #f0f4f8;
+    flex: 1; /* Faz com que o conteúdo principal ocupe o espaço restante */
+}
+
+h2 {
+    font-family: 'Georgia', serif;
+    color: #b22222;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    color: #000;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.comments-section {
+    padding: 20px;
+    width: 100%;
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 800px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.star-rating {
+    display: flex;
+    cursor: pointer;
+}
+
+.star {
+    font-size: 30px;
+    color: #ccc; /* Cor cinza para estrelas não selecionadas */
+    margin-right: 5px;
+    transition: color 0.2s ease; /* Transição suave para a cor */
+}
+
+.star:hover,
+.star:hover ~ .star {
+    color: #ccc; /* Muda para cinza */
+}
+
+.star:hover {
+    color: #b22222; /* Muda para vermelho ao passar o mouse na estrela selecionada */
+}
+
+#commentForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#commentForm input, #commentForm textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#commentForm button {
+    background-color: #b22222;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#commentForm button:hover {
+    background-color: #a61d1d;
+}
+
+.comment {
+    border-top: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.content-container {
+    min-height: calc(100vh - 100px); /* Ajuste conforme necessário */
+    padding-bottom: 20px; /* Espaço extra para o slider */
+}
+
+/* Estilizar o contêiner do rodapé */
+.footer-container {
+    width: 100%;
+    height: 100%;
+    
+}
+
+footer  {
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+    width: 100%;
+    margin-top: auto;
+    box-sizing: border-box;
+    position: relative;
+}
+
+footer p {
+    margin: 5px 0 ;
+}
+
+.tree-image-footer {
+    width: 200px;
+    height: auto;
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+}
+
+.book-image-footer {
+    width: 80px;
+    height: auto;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+
+/* Neve caindo */
+.falling-snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.snowflake {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-image: url('snowflake-blue.png');
+    background-size: contain;
+    opacity: 0.9;
+    animation: fall linear infinite;
+}
+
+.snowball {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+/*atual*/
+.inspirational-quotes {
+    text-align: center;
+    margin: 50px 0;
+}
+.quote-slider {
+    position: relative;
+    height: 100px;
+}
+.quote {
+    display: none;
+    font-size: 1.5em;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 600px;
+}
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #b22222;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*livro*/
+.book-movie-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.book-cover, .movie-cover {
+    display: flex;
+    flex-direction: column; /* Coloca a imagem em cima do botão */
+    align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+button {
+    margin-top: 10px; /* Espaçamento entre a imagem e o botão */
+    padding: 10px 15px; /* Aumenta o botão */
+    background-color: #b22222; /* Cor do botão */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #7a1515; /* Cor do botão ao passar o mouse */
+}
+
+
+/* custom-styles.css */
+
+/* Estilo para centralizar as seções */
+.central-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    margin: 20px; /* Margem ao redor */
+    max-width: 600px; /* Largura máxima para o conteúdo (ajustada) */
+    margin: 0 auto; /* Centraliza a div no meio da página */
+}
+
+/* Estilo para cada seção (livro e filme) */
+.book-section,
+.movie-section {
+    display: flex;
+    align-items: flex-start; /* Alinha a imagem e o texto no início */
+    margin: 10px auto; /* Diminui o espaçamento para 10px */
+    border: 1px solid #ccc; /* Borda ao redor da seção (opcional) */
+    padding: 15px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    width: 800px; /* Largura total da seção */
+    background-color: #fff; /* Cor de fundo branca */
+}
+.book-section {
+    margin-bottom: 20px; /* Margem inferior da seção do livro */
+    margin-top: 40px;
+}
+
+.movie-section {
+    display: flex;
+    align-items: flex-start; /* Alinha a imagem e o texto no início */
+    margin: 5px auto; /* Diminui o espaçamento para 5px */
+    border: 1px solid #ccc; /* Borda ao redor da seção (opcional) */
+    padding: 15px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    width: 800px; /* Largura total da seção */
+    background-color: #fff; /* Cor de fundo branca */
+}
+
+
+
+.media-image {
+    width: 200px; /* Largura da imagem */
+    margin-right: 20px; /* Espaçamento à direita da imagem */
+    
+    margin-left: 20px; /* Espaçamento à esquerda da imagem */
+    max-width: 150px; /* Defina a largura máxima da imagem */
+}
+
+.description {
+    flex-grow: 1; /* Permite que o texto ocupe o espaço restante */
+}
+
+.section-title {
+    margin-bottom: 10px; /* Espaço abaixo do título */
+}
+
+.button-link {
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+.action-button {
+    margin-top: 10px; /* Margem superior dos botões */
+    display: block; /* Faz o botão ocupar toda a largura */
+    margin-left: auto; /* Centraliza o botão horizontalmente */
+    margin-right: auto; /* Centraliza o botão horizontalmente */
+    padding: 12px 20px; /* Aumenta o tamanho do botão */
+    font-size: 16px; /* Aumenta o tamanho da fonte do botão */
+    background-color: #b22222; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 4px; /* Bordas arredondadas do botão */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+}
+
+.vertical-spacing {
+    margin: 50px 0; /* Espaçamento vertical entre livro e filme */
+}
+
+
