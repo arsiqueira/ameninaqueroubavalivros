@@ -17,5 +17,5 @@ JavaScript<br>
 Como Executar
 Clone o repositório:
 bash
-git clone https://github.com/seu-usuario/a-menina-que-roubava-livros.git
+git clone https://github.com/arsiqueira/ameninaqueroubavalivros.git
 Abra o arquivo index.html em um navegador para visualizar o site.
