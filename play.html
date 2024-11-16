@@ -7,6 +7,7 @@
     <link rel="icon" href="book-cover.png" sizes="12x12" type="image/png">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="musica.css">
+    <link rel="stylesheet" href="menu.css">
 </head>
 <body>
 
@@ -15,13 +16,17 @@
     <header>
         <h1>A Menina que Roubava Livros</h1>
         <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="lf.html">Livro x Filme</a></li>
-                <li><a href="galeria.html">Galeria</a></li>
-                <li class="active"><a href="play.html">Músicas</a></li>
-                <li><a href="mais.html">E mais</a></li>
-            </ul>
+            <!-- Ícone de menu hambúrguer -->
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<!-- Menu de navegação -->
+<ul class="menu">
+    <li><a href="index.html">Início</a></li>
+    <li><a href="lf.html">Livro x Filme</a></li>
+    <li><a href="galeria.html">Galeria</a></li>
+    <li class="active"><a href="play.html">Músicas</a></li>
+    <li><a href="mais.html">E mais</a></li>
+</ul>
         </nav>
     </header>
 
@@ -173,5 +178,6 @@
 
     <script src="script.js"></script>
     <script src="player.js"></script> <!-- JavaScript para o slider -->
+    <script src="menu.js"></script>
 </body>
 </html>

@@ -121,3 +121,4 @@ document.getElementById('next').addEventListener('click', () => {
 // Exibe a primeira citação
 showQuote(currentQuote);
 
+ 

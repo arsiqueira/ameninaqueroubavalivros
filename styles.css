@@ -1,3 +1,5 @@
+
+
 @font-face {
     font-family: 'Candlescript';
     src: url('Candlescript.otf') format('opentype');
@@ -40,6 +42,7 @@ h1 {
     margin: 0;
     letter-spacing: 2px;
     text-shadow: 2px 2px 4px #888;
+    
 }
 
 nav ul {
@@ -368,46 +371,154 @@ button:hover {
     cursor: pointer; /* Muda o cursor ao passar sobre o botão */
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-     h1 {
-        font-size: 24px; /* Tamanho da fonte do h1 em telas menores */
-    }
-
-    h2 {
-        font-size: 1.5em; /* Reduz o tamanho dos subtítulos em telas pequenas */
-    }
-
-    p {
-        font-size: 1em; /* Reduz o tamanho do texto em telas pequenas */
-    }
-
-    nav ul {
-        flex-direction: column; /* Muda a direção da lista de navegação para coluna */
-        align-items: center; /* Centraliza os itens da lista */
-    }
-
-    nav ul li {
-        margin: 10px 0; /* Ajusta a margem entre os itens */
-    }
-
-    .book-section, .movie-section {
-        flex-direction: column; /* Alinha imagem e texto verticalmente em telas menores */
-        width: 90%; /* Reduz a largura da seção */
-    }
-
-    .comments-section {
-        width: 90%; /* Ajusta a largura da seção de comentários */
-    }
-    
-    footer {
-        flex-direction: column; /* Alinha itens do rodapé em coluna */
-        align-items: center; /* Centraliza os itens no rodapé */
-    }
-}
-
 .vertical-spacing {
     margin: 50px 0; /* Espaçamento vertical entre livro e filme */
 }
+/* Reduzir o tamanho da fonte em telas médias */
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+}
 
+/* Ajuste para telas menores */
+@media screen and (max-width: 768px) {
+    /* Ajustando o tamanho do título principal */
+    h1 {
+        font-size: 2.5em;
+    }
 
+    h2 {
+        font-size: 1.8em;
+    }
+
+    /* Seções de livro e filme devem empilhar em vez de ficar lado a lado */
+    .book-section, .movie-section {
+        flex-direction: column; /* Empilha a imagem e o texto */
+        align-items: center; /* Centraliza o conteúdo */
+        width: 80%; /* Usa toda a largura disponível */
+        padding: 10px;
+    }
+
+    /* Ajusta a imagem para caber melhor em telas pequenas */
+    .media-image {
+        width: 60%; /* Imagem ocupa toda a largura disponível */
+        max-width: 300px; /* Limita o tamanho máximo da imagem */
+        margin-right: 0; /* Remove o espaçamento à direita */
+        margin-bottom: 20px; /* Adiciona espaçamento abaixo da imagem */
+    }
+
+    /* Ajusta o botão para caber melhor em telas pequenas */
+    .action-button {
+        width: 100%; /* O botão ocupa toda a largura disponível */
+        padding: 15px 0;
+        font-size: 1em;
+    }
+
+    /* Centraliza o menu e torna o botão de navegação visível */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block; /* Torna o ícone do menu visível */
+        font-size: 2em;
+        cursor: pointer;
+    }
+
+    /* Adapta o slider de citações */
+    .quote-slider {
+        height: auto; /* Ajusta a altura do slider para se adaptar ao conteúdo */
+    }
+
+    /* Ajusta o formulário de comentários */
+    #commentForm input,
+    #commentForm textarea,
+    #commentForm button {
+        font-size: 1.1em;
+        padding: 12px;
+        margin-bottom: 15px;
+    }
+
+    /* Ajuste o rodapé */
+    footer {
+        flex-direction: column; /* Organiza os itens verticalmente */
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .tree-image-footer, .book-image-footer {
+        display: none; /* Oculta as imagens em telas pequenas */
+    }
+
+    .inspirational-quotes {
+        margin: 20px 0; /* Reduzir margem */
+        padding: 10px;
+    }
+
+    .quote {
+        font-size: 1.1em; /* Reduzir ainda mais o tamanho da fonte */
+        max-width: 80%; /* Aumenta a largura das citações */
+    }
+
+    button {
+        font-size: 12px; /* Font menor para botões */
+        padding: 6px 12px; /* Menos padding */
+    }
+}
+
+/* Ajustes para telas muito pequenas (como celulares com largura abaixo de 480px) */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.8em; /* Reduz o tamanho do título */
+    }
+
+    h2 {
+        font-size: 1.4em; /* Reduz o tamanho do subtítulo */
+    }
+
+    .inspirational-quotes {
+        margin: 20px 0; /* Reduzir margem */
+        padding: 10px;
+    }
+
+    .quote {
+        font-size: 1.1em; /* Reduzir ainda mais o tamanho da fonte */
+        max-width: 80%; /* Aumenta a largura das citações */
+    }
+
+    button {
+        font-size: 12px; /* Font menor para botões */
+        padding: 6px 12px; /* Menos padding */
+    }
+
+    .book-section, .movie-section {
+        padding: auto; /* Menos espaçamento nas seções */
+        text-align: center;
+        width: 80%;
+    }
+
+    .media-image {
+        width: 50%; /* Imagem ocupa 90% da largura */
+        max-width: 250px;
+        margin-bottom: 15px;
+    }
+
+    .quote-slider {
+        font-size: 1.2em; /* Reduz o tamanho das citações */
+    }
+
+    .comments-section {
+        padding: 20px;
+        width: 70%;
+        background-color: #fff;
+        margin: 20px auto;
+        max-width: 800px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+    }
+}
