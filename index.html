@@ -9,6 +9,8 @@
     <link rel="icon" href="book-cover.png" sizes="12x12" type="image/png">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="slide.css">
+    <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="menu.css">
 </head>
 
 <body>
@@ -18,13 +20,20 @@
     <header>
         <h1>A Menina que Roubava Livros</h1>
         <nav>
-            <ul>
-                <li class="active"><a href="index.html">Início</a></li>
-                <li><a href="lf.html">Livro x Filme</a></li>
-                <li><a href="galeria.html">Galeria</a></li>
-                <li><a href="play.html">Músicas</a></li>
-                <li><a href="mais.html">E mais</a></li>
-            </ul>
+           <!-- Ícone de menu hamburguer -->
+<!-- Ícone de menu hambúrguer -->
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<!-- Menu de navegação -->
+<ul class="menu">
+    <li class="active"><a href="index.html">Início</a></li>
+    <li><a href="lf.html">Livro x Filme</a></li>
+    <li><a href="galeria.html">Galeria</a></li>
+    <li><a href="play.html">Músicas</a></li>
+    <li><a href="mais.html">E mais</a></li>
+</ul>
+
+
         </nav>
     </header>
 
@@ -108,6 +117,149 @@
             <button id="prev"><</button>
         </div>
     </div>
+   
+    <div class="container">
+        <div class="card-2" >
+            <div class="text"><span><h4>A Morte como Narradora</h4></span>
+            </div>
+
+            <div class="content">
+                
+                <p class="desc">A história é narrada pela Morte, que observa e reflete sobre a vida e a morte durante a Segunda Guerra
+                    Mundial. Sua perspectiva única traz um tom cínico e, ao mesmo tempo, empático para a narrativa. A Morte
+                    não apenas coleta almas, mas também se apega a algumas, como Liesel, cuja vida intensa e cheia de
+                    emoções a fascina. Ela expressa sua exaustão com a natureza humana, mas também revela um profundo
+                    entendimento do amor e da dor que permeiam a existência.</p>
+            </div>
+
+            <div class="arrow">
+                <span>&#8673;</span>
+            </div>
+        </div>
+        <div class="card-2" >
+            <div class="text"><span><h4>A Importância da Literatura</h4></span>
+            </div>
+
+            <div class="content">
+                
+                <p class="desc">Liesel encontra consolo e significado em livros, que se tornam seu refúgio em meio ao caos da guerra. O
+                    ato de roubar livros representa sua busca por conhecimento e sua resistência ao regime opressor. Cada
+                    livro que ela adquire é uma forma de rebeldia contra a censura e uma maneira de se conectar com seu
+                    passado e suas emoções. A literatura não é apenas um escape; é uma ferramenta de empoderamento que
+                    permite a Liesel compreender o mundo ao seu redor.</p>
+            </div>
+
+            <div class="arrow">
+                <span>&#8673;</span>
+            </div>
+        </div>
+        <div class="card-2" >
+            <div class="text"><span><h4>A Relação de Liesel com seus Pais Adotivos</h4></span>
+            </div>
+
+            <div class="content">
+                
+                <p class="desc">A relação de Liesel com Hans e Rosa Hubermann é central à história. Hans é carinhoso e paciente,
+                    ensinando-a a ler e a se expressar, enquanto Rosa é mais rígida, mas também demonstra amor à sua
+                    maneira. A dinâmica familiar é complexa, com Liesel lutando para entender o amor e a dor em um lar que é
+                    tanto um abrigo quanto um campo de batalha emocional. A forma como eles se apoiam mutuamente em momentos
+                    difíceis mostra o poder da família e do amor em tempos de crise.</p>
+            </div>
+
+            <div class="arrow">
+                <span>&#8673;</span>
+            </div>
+        </div>
+        <div class="card-2" >
+            <div class="text"><span><h4>Amizade e Solidariedade</h4></span>
+            </div>
+
+            <div class="content">
+                
+                <p class="desc">A amizade de Liesel com Rudy Steiner exemplifica a solidariedade e o apoio mútuo em tempos adversos.
+                    Juntos, eles enfrentam os desafios da vida durante a guerra, desde a luta pela sobrevivência até a busca
+                    por pequenas alegrias. Rudy, com seu espírito rebelde e encantador, é uma fonte de coragem para Liesel,
+                    incentivando-a a explorar seu potencial. A amizade deles transcende o medo e a incerteza, mostrando como
+                    laços profundos podem surgir mesmo nas circunstâncias mais sombrias.</p>
+            </div>
+
+            <div class="arrow">
+                <span>&#8673;</span>
+            </div>
+        </div>
+        <div class="card-2" >
+            <div class="text"><span><h4>O Impacto da Guerra</h4></span>
+            </div>
+
+            <div class="content">
+                
+                <p class="desc"> A ambientação da história durante a Segunda Guerra Mundial destaca os efeitos devastadores do conflito
+                    sobre indivíduos e comunidades. A guerra é um pano de fundo que molda as experiências de todos os
+                    personagens, trazendo perdas e sacrifícios. Os bombardeios e a constante ameaça de violência criam um
+                    ambiente de tensão e incerteza, forçando Liesel e sua família a se adaptarem para sobreviver. O autor
+                    retrata a guerra não apenas como um evento histórico, mas como uma força que altera a vida de cada
+                    personagem de maneiras profundas e pessoais.</p>
+            </div>
+
+            <div class="arrow">
+                <span>&#8673;</span>
+            </div>
+        </div>
+        <div class="card-2" >
+            <div class="text"><span><h4>A Perseguição aos Judeus</h4></span>
+            </div>
+
+            <div class="content">
+                
+                <p class="desc"> A presença de Max Vandenburg, um judeu escondido na casa de Liesel, ilustra a brutalidade da perseguição
+                    nazista. A história aborda temas de discriminação e sobrevivência, mostrando a coragem de Max em face do
+                    perigo e a bondade da família Hubermann em protegê-lo. A amizade entre Liesel e Max é uma luz na
+                    escuridão, simbolizando a esperança e a resistência diante da opressão. As trocas de palavras e
+                    histórias entre eles são um lembrete do poder da conexão humana em tempos de desespero.</p>
+            </div>
+
+            <div class="arrow">
+                <span>&#8673;</span>
+            </div>
+        </div>
+        <div class="card-2" >
+            <div class="text"><span><h4>A Força das Palavras</h4></span>
+            </div>
+
+            <div class="content">
+                
+                <p class="desc"> A narrativa enfatiza o poder das palavras, tanto para ferir quanto para curar. Liesel usa as palavras
+                    como um meio de expressão e resistência, especialmente ao contar histórias. A forma como ela descobre
+                    seu amor pela leitura e pela escrita reflete sua jornada de autodescoberta. As palavras têm o poder de
+                    transformar sua realidade e proporcionar conforto em momentos difíceis. A escrita de Liesel, por sua
+                    vez, se torna uma forma de resistência contra a tirania e uma celebração da humanidade.</p>
+            </div>
+
+            <div class="arrow">
+                <span>&#8673;</span>
+            </div>
+        </div>
+        <div class="card-2" >
+            <div class="text"><span><h4>A Inevitabilidade da Morte</h4></span>
+            </div>
+
+            <div class="content">
+                
+                <p class="desc"> A Morte, como narradora, traz uma reflexão constante sobre a mortalidade. A aceitação da morte e o
+                    reconhecimento da vida efêmera são temas centrais. A Morte não é apenas uma colecionadora de almas, mas
+                    uma observadora da vida em todas as suas complexidades. Ela nos lembra que cada momento deve ser
+                    valorizado, pois a vida é frágil e temporária. Este tema ressoa fortemente na trajetória de Liesel, que
+                    experimenta tanto amor quanto perda ao longo de sua jornada.</p>
+            </div>
+
+            <div class="arrow">
+                <span>&#8673;</span>
+            </div>
+        </div>
+
+        
+    </div>
+    
     <div class="footer-container">
         <footer>
             <img src="tree-dry.png" alt="Imagem de árvore" class="tree-image-footer">
@@ -116,9 +268,12 @@
         </footer>
 
     </div>
+    
+
 
     <script src="script.js"></script>
     <script src="app.js"></script> <!-- JavaScript para o slider -->
+    <script src="menu.js"></script>
 </body>
 
 </html>

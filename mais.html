@@ -8,6 +8,7 @@
     
     <link rel="icon" href="book-cover.png" sizes="12x12" type="image/png">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu.css">
 </head>
 
 <body>
@@ -15,13 +16,17 @@
     <header>
         <h1>A Menina que Roubava Livros</h1>
         <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="lf.html">Livro x Filme</a></li>
-                <li><a href="galeria.html">Galeria</a></li>
-                <li><a href="play.html">Músicas</a></li>
-                <li class="active"><a href="mais.html">E mais</a></li>
-            </ul>
+           <!-- Ícone de menu hambúrguer -->
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<!-- Menu de navegação -->
+<ul class="menu">
+    <li><a href="index.html">Início</a></li>
+    <li><a href="lf.html">Livro x Filme</a></li>
+    <li><a href="galeria.html">Galeria</a></li>
+    <li><a href="play.html">Músicas</a></li>
+    <li class="active"><a href="mais.html">E mais</a></li>
+</ul>
         </nav>
     </header>
 
@@ -31,8 +36,8 @@
     <div class="description">
         <h2 class="section-title">A Menina que Roubava Livros</h2>
         <p>Uma história emocionante sobre a amizade e o poder das palavras, ambientada durante a Segunda Guerra Mundial, onde uma jovem encontra conforto na leitura e na partilha de livros com aqueles que ama.</p>
-        <a href="livro/a-menina-que-roubava-livros.pdf" target="_blank" class="button-link">
-            <button class="action-button">Baixar PDF</button>
+        <a href="https://intrinseca.com.br/livro/a-menina-que-roubava-livros/" target="_blank" class="button-link">
+            <button class="action-button">Compre aqui</button>
         </a>
     </div>
 </section>
@@ -56,18 +61,25 @@
         <h2>Mensagens Inspiradoras</h2>
         <div class="quote-slider">
             <div class="quote">
-                <p>"As palavras têm o poder de transformar vidas."</p>
+                <p>"Se a Morte conta uma história, você deve parar para ouvir."</p>
             </div>
             <div class="quote">
-                <p>"A leitura é um refúgio em tempos de dificuldade."</p>
+                <p>"As palavras são a minha arma preferida."</p>
             </div>
             <div class="quote">
-                <p>"A empatia pode vencer o ódio."</p>
+                <p>"A Morte vai contar sua história, mas ela vai te contar de uma forma muito mais interessante."</p>
             </div>
             <div class="quote">
-                <p>"Nunca devemos esquecer as lições do passado."</p>
+                <p>"A vida é feita de momentos pequenos, mas importantes."</p>
+            </div>
+            <div class="quote">
+                <p>"Eu sou a Morte e escolho esta menina, Liesel Meminger, para ser minha amiga."</p>
+            </div>
+            <div class="quote">
+                <p>"Nunca subestime o poder das palavras. Elas podem mudar o curso da história."</p>
             </div>
         </div>
+        
         <button id="prev">Anterior</button>
         <button id="next">Próximo</button>
     </section>
@@ -97,6 +109,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="menu.js"></script>
     <script src="app.js"></script> <!-- JavaScript para o slider -->
 </body>
 

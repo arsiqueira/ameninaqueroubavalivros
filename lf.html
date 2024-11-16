@@ -8,8 +8,8 @@
     
     <link rel="icon" href="book-cover.png" sizes="12x12" type="image/png">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="comp.css">
+    <link rel="stylesheet" href="menu.css">
 </head>
 
 <body>
@@ -18,13 +18,17 @@
     <header>
         <h1>A Menina que Roubava Livros</h1>
         <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li class="active"><a href="lf.html">Livro x Filme</a></li>
-                <li><a href="galeria.html">Galeria</a></li>
-                <li><a href="play.html">Músicas</a></li>
-                <li><a href="mais.html">E mais</a></li>
-            </ul>
+            <!-- Ícone de menu hambúrguer -->
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<!-- Menu de navegação -->
+<ul class="menu">
+    <li><a href="index.html">Início</a></li>
+    <li class="active"><a href="lf.html">Livro x Filme</a></li>
+    <li><a href="galeria.html">Galeria</a></li>
+    <li><a href="play.html">Músicas</a></li>
+    <li><a href="mais.html">E mais</a></li>
+</ul>
         </nav>
     </header>
     <main>
@@ -123,7 +127,44 @@
             </div>
 
         </section>
-
+        <section class="comparison-mobile">
+            <div class="comparison-item">
+                <h3>Livro</h3>
+                <p><strong>Aprofundamento da Relação:</strong> A relação entre Liesel e Max é mais explorada. No livro, Liesel e Max desenvolvem uma amizade profunda através de cartas e conversas sobre suas experiências e medos.</p>
+                <h3>Filme</h3>
+                <p><strong>Aprofundamento da Relação:</strong> A relação entre Liesel e Max é menos aprofundada. No filme, a conexão entre eles é mais superficial, sem o desenvolvimento detalhado do livro.</p>
+            </div>
+        
+            <div class="comparison-item">
+                <h3>Livro</h3>
+                <p><strong>Emoções de Liesel:</strong> Os pensamentos e emoções de Liesel são descritos detalhadamente. A narrativa explora seus sentimentos, permitindo uma conexão emocional mais profunda.</p>
+                <h3>Filme</h3>
+                <p><strong>Emoções de Liesel:</strong> As emoções de Liesel são mostradas visualmente, sem narração interna, o que limita a profundidade.</p>
+            </div>
+        
+            <div class="comparison-item">
+                <h3>Livro</h3>
+                <p><strong>Contexto Histórico:</strong> O contexto da guerra é explorado mais profundamente. O livro oferece uma análise detalhada sobre o impacto da guerra na vida das pessoas, destacando a resistência e as dificuldades enfrentadas.</p>
+                <h3>Filme</h3>
+                <p><strong>Contexto Histórico:</strong> O contexto da guerra é abordado de forma mais superficial. Embora o filme mostre a guerra, ele não se aprofunda nas complexidades históricas como o livro faz.</p>
+            </div>
+        
+            <div class="comparison-item">
+                <h3>Livro</h3>
+                <p><strong>Narrativa da Morte:</strong> A morte narra os eventos, proporcionando uma perspectiva única sobre a fragilidade da vida e a dor da guerra.</p>
+                <h3>Filme</h3>
+                <p><strong>Narrativa da Morte:</strong> No filme, a Morte tem um papel menor, com aparições breves, o que limita a visão profunda e filosófica que ela oferece no livro.</p>
+            </div>
+        
+            <div class="comparison-item">
+                <h3>Livro</h3>
+                <p><strong>Roubo de Livros:</strong> O roubo de livros é apresentado como um ato de resistência e sobrevivência, com um significado profundo na vida de Liesel.</p>
+                <h3>Filme</h3>
+                <p><strong>Roubo de Livros:</strong> O filme menciona o roubo de livros, mas não explora seu significado profundo como no livro. A cena é tratada de maneira mais superficial.</p>
+            </div>
+        </section>
+        
+        
 
 
     </main>
@@ -137,6 +178,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="menu.js"></script>
 </body>
 
 </html>
