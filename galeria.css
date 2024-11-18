@@ -170,7 +170,15 @@
      .card {
          display: none;
          /* Esconde a galeria de cards em telas pequenas */
-     }
+     } .slide {
+     width: 100%;
+     height: 300px;
+     /* Define uma altura consistente para todas as imagens */
+     object-fit: cover;
+     /* Ajusta o enquadramento sem distorcer as imagens */
+
+
+ }
 
      .gallery-mobile {
          display: block;
@@ -183,7 +191,15 @@
      .card {
          display: flex;
          /* Exibe a galeria de cards em telas grandes */
-     }
+     }.slide {
+     width: 100%;
+     height: 300px;
+     /* Define uma altura consistente para todas as imagens */
+     object-fit: cover;
+     /* Ajusta o enquadramento sem distorcer as imagens */
+
+
+ }
 
      .gallery-mobile {
          display: none;
