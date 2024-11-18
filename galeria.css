@@ -1,169 +1,192 @@
+ /* Estilos gerais para imagens */
+ img {
+     width: 100%;
+ }
+
+ /* Estilos para o contêiner principal */
+ main {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 20px;
+     /* Espaço entre os cards */
+     padding: 20px;
+ }
+
+ /* Estilos para os cards */
+ .card {
+     width: calc(33.333% - 40px);
+     /* 33.333% da largura menos o espaço */
+     max-width: 300px;
+     margin: 10px;
+     cursor: pointer;
+     position: relative;
+     height: 200px;
+     background: linear-gradient(to bottom, #ffffff, #f0f4f8);
+     border-radius: 10px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     overflow: hidden;
+     perspective: 1000px;
+     box-shadow: 0 0 0 1px #a61d1d;
+     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+ }
+
+ /* Imagem dentro do card */
+ .card .image {
+     width: 100%;
+     fill: #333;
+     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+ }
+
+ .card:hover {
+     transform: scale(1.05);
+     box-shadow: 0 8px 16px #a61d1d;
+ }
+
+ /* Conteúdo dentro do card */
+ .card__content {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     padding: 20px;
+     box-sizing: border-box;
+     background: linear-gradient(to bottom, #ffffff, #f0f4f8);
+     transform: rotateX(-90deg);
+     transform-origin: bottom;
+     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+ }
+
+ .card:hover .card__content {
+     transform: rotateX(0deg);
+ }
+
+ .card__title {
+     margin: 0;
+     font-size: 24px;
+     color: #a61d1d;
+     font-weight: 700;
+     font-family: sans-serif;
+ }
+
+ .card:hover .image {
+     scale: 0;
+ }
+
+ .card__description {
+     margin: 10px 0 0;
+     font-size: 14px;
+     color: black;
+     line-height: 1.4;
+ }
+
+ /*f*/
+ /* Estilos gerais para a galeria */
+ img {
+     width: 100%;
+ }
+
+ .gallery-desktop {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 20px;
+     padding: 20px;
+ }
+
+ .card {
+     width: calc(33.333% - 40px);
+     max-width: 300px;
+     margin: 10px;
+     cursor: pointer;
+     position: relative;
+     height: 200px;
+     background: linear-gradient(to bottom, #ffffff, #f0f4f8);
+     border-radius: 10px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     overflow: hidden;
+     perspective: 1000px;
+     box-shadow: 0 0 0 1px #a61d1d;
+     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+ }
+
+ /* Estilos para o slider */
+ .gallery-mobile {
+     overflow: hidden;
+     width: 100%;
+     margin-top: -1.5rem;
+ }
+
+ #mobile-slider {
+     display: flex;
+     transition: transform 0.3s ease-in-out;
+ }
+
+ .slider-item {
+     min-width: 100%;
+     box-sizing: border-box;
+ }
+
+ .slide {
+     width: 100%;
+     height: 300px;
+     /* Define uma altura consistente para todas as imagens */
+     object-fit: cover;
+     /* Ajusta o enquadramento sem distorcer as imagens */
+
+
+ }
+
+ .slider-title {
+     text-align: center;
+     color: #a61d1d;
+     box-shadow: 0 0 0 0.4px #a61d1d;
+     padding: 10px;
+ }
+ #prev-slide,
+ #next-slide { 
+     background-color: transparent;
+     border: none;
+     font-size: 24px;
+     color: #a61d1d;
+     cursor: pointer;
+ }
  
-/* Estilos gerais para imagens */
-img {
-    width: 100%;
-}
+ 
 
-/* Estilos para o contêiner principal */
-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px; /* Espaço entre os cards */
-    padding: 20px;
-}
+ .slider-description {
+     text-align: center;
+     color: black;
+     padding: 10px;
+ }
 
-/* Estilos para os cards */
-.card {
-    width: calc(33.333% - 40px); /* 33.333% da largura menos o espaço */
-    max-width: 300px;
-    margin: 10px;
-    cursor: pointer;
-    position: relative;
-    height: 200px;
-    background: linear-gradient(to bottom, #ffffff, #f0f4f8);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    perspective: 1000px;
-    box-shadow: 0 0 0 1px #a61d1d;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
+ /* Media query para ativar a galeria móvel em telas pequenas */
+ @media (max-width: 768px) {
+     .card {
+         display: none;
+         /* Esconde a galeria de cards em telas pequenas */
+     }
 
-/* Imagem dentro do card */
-.card .image {
-    width: 100%;
-    fill: #333;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
+     .gallery-mobile {
+         display: block;
+         /* Exibe a galeria móvel em telas pequenas */
+     }
+ }
 
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px #a61d1d;
-}
+ /* Media query para ativar a galeria de desktop em telas grandes */
+ @media (min-width: 769px) {
+     .card {
+         display: flex;
+         /* Exibe a galeria de cards em telas grandes */
+     }
 
-/* Conteúdo dentro do card */
-.card__content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    background: linear-gradient(to bottom, #ffffff, #f0f4f8);
-    transform: rotateX(-90deg);
-    transform-origin: bottom;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.card:hover .card__content {
-    transform: rotateX(0deg);
-}
-
-.card__title {
-    margin: 0;
-    font-size: 24px;
-    color: #a61d1d;
-    font-weight: 700;
-    font-family: sans-serif;
-}
-
-.card:hover .image {
-    scale: 0;
-}
-
-.card__description {
-    margin: 10px 0 0;
-    font-size: 14px;
-    color: black;
-    line-height: 1.4;
-}
-
-/*f*/
-/* Estilos gerais para a galeria */
-img {
-    width: 100%;
-}
-
-.gallery-desktop {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.card {
-    width: calc(33.333% - 40px);
-    max-width: 300px;
-    margin: 10px;
-    cursor: pointer;
-    position: relative;
-    height: 200px;
-    background: linear-gradient(to bottom, #ffffff, #f0f4f8);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    perspective: 1000px;
-    box-shadow: 0 0 0 1px #a61d1d;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-/* Estilos para o slider */
-.gallery-mobile {
-    overflow: hidden;
-    width: 100%;
-    margin-top: -1.5rem;
-}
-
-#mobile-slider {
-    display: flex;
-    transition: transform 0.3s ease-in-out;
-}
-
-.slider-item {
-    min-width: 100%;
-    box-sizing: border-box;
-}
-
-.slide {
-    width: 100%;
-    height: auto;
-}
-
-.slider-title {
-    text-align: center;
-    color: #a61d1d;
-    box-shadow: 0 0 0 0.4px #a61d1d;
-    padding: 10px;
-}
-.slider-description {
-    text-align: center;
-    color: black;
-    padding: 10px;
-}
-
-/* Media query para ativar a galeria móvel em telas pequenas */
-@media (max-width: 768px) {
-    .card {
-        display: none; /* Esconde a galeria de cards em telas pequenas */
-    }
-    .gallery-mobile {
-        display: block; /* Exibe a galeria móvel em telas pequenas */
-    }
-}
-
-/* Media query para ativar a galeria de desktop em telas grandes */
-@media (min-width: 769px) {
-    .card {
-        display: flex; /* Exibe a galeria de cards em telas grandes */
-    }
-    .gallery-mobile {
-        display: none; /* Esconde a galeria móvel em telas grandes */
-    }
-}
+     .gallery-mobile {
+         display: none;
+         /* Esconde a galeria móvel em telas grandes */
+     }
+ }

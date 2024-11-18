@@ -43,3 +43,19 @@ mobileSlider.addEventListener('touchend', function() {
         prevX = -currentIndex * mobileSlider.clientWidth; // Reseta a posição para o slide atual
     }
 });
+
+
+// Seleciona o botão "Próximo"
+const nextButton = document.querySelector('#next-slide');
+
+// Adiciona o evento de clique ao botão "Próximo"
+nextButton.addEventListener('click', function() {
+    showSlide(currentIndex + 1); // Passa para o próximo slide
+});
+// Seleciona o botão "Anterior"
+const prevButton = document.querySelector('#prev-slide');
+
+// Adiciona o evento de clique ao botão "Anterior"
+prevButton.addEventListener('click', function() {
+    showSlide(currentIndex - 1); // Volta para o slide anterior
+});
