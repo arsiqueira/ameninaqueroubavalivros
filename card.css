@@ -69,7 +69,7 @@ h4 {
 
 .container {
     width: 100%;
-    min-height: 176vh;
+    max-height: 180vh;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
